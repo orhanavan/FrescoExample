@@ -1,5 +1,6 @@
 package com.orhan.frescodeneme;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         SimpleDraweeView draweeView2 = findViewById(R.id.rounded);
         draweeView2.setImageURI(imageUri);
+
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+
 
     }
 }
