@@ -3,12 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/my_image_view"
+        android:id="@+id/simple"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        fresco:placeholderImage="@drawable/photo" />
+        fresco:placeholderImage="@drawable/photo"
+        android:layout_gravity="center"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        fresco:roundAsCircle="true"
+        fresco:placeholderImage="@drawable/photo"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/rounded"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        fresco:placeholderImage="@drawable/photo"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundedCornerRadius="15dp"
+        fresco:roundingBorderWidth="4dp"
+        fresco:roundWithOverlayColor="@color/colorAccent"
+        fresco:roundingBorderColor="@color/colorPrimary" />
 
 </LinearLayout>
